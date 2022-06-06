@@ -32,7 +32,7 @@ let API = "1648bacc19c6e7e16cc0433fba4bc9ca"
     .then(data => {
         console.log(data)
         document.getElementById("weatherdata").innerHTML=`<div class="card" style="width: 18rem;">
-        <h5 class="card-title">${city}</h5>
+        <h5 class="card-title">${city}'s forecast for today</h5>
         <img src="http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png" class="card-img-top" alt="...">
 
         <div class="card-body">
@@ -44,11 +44,11 @@ let API = "1648bacc19c6e7e16cc0433fba4bc9ca"
 
 
         
-        </div>
+      
       </div>`
       let fivedayHTML = ""
       for(i=0; i<5; i++) {
-            fivedayHTML+= `<div class="card" style="width: 18rem;">
+            fivedayHTML+= `<div class="card" style="width: 14rem;">
             <h5 class="card-title">Day ${i+1}</h5>
             <img src="http://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png" class="card-img-top" alt="...">
     
